@@ -1,2 +1,3 @@
-[![CodeQL](https://github.com/pwcz/fastapi-project-template/actions/workflows/codeql.yml/badge.svg)](https://github.com/pwcz/fastapi-project-template/actions/workflows/codeql.yml)
+
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 # fastapi-project-template
