@@ -29,8 +29,8 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Test with pytest
       run: |
-        pip install pytest pytest-cov requests coveralls
-        python -m pytest
+        pip install pytest pytest-cov requests coveralls coverage
+        coverage run -m pytest
         coveralls --service=github
       env:
         GITHUB_TOKEN: ${{ github.token }}
