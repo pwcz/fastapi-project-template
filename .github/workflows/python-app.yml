@@ -29,10 +29,6 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Test with pytest
       run: |
-        pip install pytest pytest-cov requests
-        python -m pytest --cov=./app --cov-report xml
-    - name: Coveralls
-      uses: coverallsapp/github-action@master
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        path-to-lcov: coverage.xml
+        pip install pytest pytest-cov requests coveralls
+        python -m pytest
+        coveralls
