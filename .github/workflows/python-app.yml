@@ -31,6 +31,6 @@ jobs:
       run: |
         pip install pytest pytest-cov requests coveralls
         python -m pytest
-        coveralls
+        coveralls --service=github
       env:
         GITHUB_TOKEN: ${{ github.token }}
